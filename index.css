@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Noto+Sans+Display:ital,wght@0,500;1,500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
 :root {
     --nord0: #2E3440;
     --nord1: #3B4252;
@@ -20,50 +23,162 @@
     --nord15: #B48EAD;
 
     --BgColor: #1d293a;
+    --pureblack: #000000;
+    --darknord2: #1b1e26;
 }
 
-@font-face {
-    font-family: SometypeMono;
-    src: url(assets/fonts/SometypeMono-Regular.woff);
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
 }
 
-@font-face {
-    font-family: SometypeMonoBold;
-    src: url(assets/fonts/SometypeMono-Bold.woff);
+/*.open-sans-<uniquifier> {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }*/
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 400 to 700
+
+.sometype-mono-<uniquifier> {
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
+
+
+
+.oxygen-light {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.oxygen-regular {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.oxygen-bold {
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-@font-face {
-    font-family: SometypeMonoItalic;
-    src: url(assets/fonts/SometypeMono-RegularItalic.woff);
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-@font-face {
-    font-family: SometypeMonoBoldItalic;
-    src: url(assets/fonts/SometypeMono-BoldItalic.woff);
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-@font-face {
-    font-family: ChesnaGrotesk;
-    src: url(assets/fonts/ChesnaGrotesk-Medium.otf);
+.lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
-@font-face {
-    font-family: Kelson;
-    src: url(assets/fonts/Kelson.otf);
+.lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.lato-bold-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Start Website Formatting */
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--BgColor);
+    height: 100%;
+    font-size: 100%;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header{
+    margin-top: 0.625rem;
+    
+    background: var(--nord10);
+    color: var(--nord4);
+    border-radius: 0.3125rem;
+    text-align: center;
+    padding: 1.875rem;
+
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.header h1{
+    font-size: 3.125rem;
+    font-synthesis: none;
+
+    color:var(--nord6);
 }
 
 .nav{
     overflow: hidden;
-    font-family: Kelson;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
 
-    background-color: var(--nord10);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    background-color: var(--nord3);
 }
 
 .nav a{
     display: block;
     float: left;
-    padding: 14px 16px;
+    padding: 0.875rem 1rem;
     transition: background-color .5s;
 
     color: var(--nord6);
@@ -73,120 +188,175 @@
 }
 
 .nav a:hover:not(#currentpage){
-    background-color: var(--nord15);
+    background-color: var(--nord0);
 }
 
 #currentpage{
-    background-color: var(--nord3);
+    background-color: var(--nord7);
+    color:var(--BgColor);
 }
 
-.header{
-    background-color: var(--nord9);
-    color: var(--nord4);
-    border-radius: 5px;
-    margin-top: 10px;
-
-    font-family: ChesnaGrotesk;
-    text-align: center;
-    padding: 30px;
+.Left{
+    flex-grow: 1;
 }
 
-.header h1{
-    font-family: SometypeMonoBold;
-    font-size: 50px;
-
-    color:var(--nord6);
+.Right{
+    max-width: 33%;
+    order: 1;
 }
 
 .block{
-    background-color: var(--nord0);
-    padding: 20px;
-    margin-top: 20px;
+    background-color: var(--darknord2);
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-right: 1.25rem;
+    overflow: auto;
 
     box-sizing: border-box;
-    border: 2px solid var(--nord3);
-    border-radius: 10px;
+    border: 0.125rem solid var(--nord3);
+    border-radius: 0.625rem;
 }
 
 .block h1 {
     color: var(--nord4);
-    font-family: SometypeMono;
+    
+    font-family: "Oxygen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-synthesis: none;
+    font-size: 2rem;
 
-    margin-top: 5px;
+    margin-top: 0.3125rem;
     display: inline-block;
     margin-right: auto;
 
-    border-bottom: solid var(--nord14);
+    border-bottom: solid var(--accentcolor);
 }
 
 .block h2 {
-    color: var(--nord13);
-    font-family: ChesnaGrotesk;
-    font-size: 20pt;
+    color: var(--nord5);
+    
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.75rem;
+    font-synthesis: none;
 
     margin-top: 0;
 }
 
 .block h3{
     color: var(--nord14);
-    font-family: ChesnaGrotesk;
-    font-size: 18pt;
+    
+    font-family: "Oxygen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-synthesis: none;
 
     margin-top: 0;
 }
 
 .block ul, .block ol{
     color: var(--nord6);
-    font-family: ChesnaGrotesk;
-    font-size: 12pt;
-    line-height: 2;
+    
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 2rem;
+
+    list-style-type: circle;
 }
 
 .block a{
     text-decoration: underline;
-    color: var(--nord15);
+    color: var(--nord12);
+}
+
+.block img{
+    border: .3rem solid var(--nord3);
+    border-radius: .5rem;
+    width: 60%;
+    margin-top: 3rem;
 }
 
 .block p{
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
+    font-size: 1rem;
+}
+
+.row{
+    display: flex;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .footer{
-    padding: 20px;
-    background-color: var(--nord12);
+    padding: 1.25rem;
+    background-color: var(--nord1);
 
     text-align: center;
-    font-family: SometypeMono;
+    align-self: center;
     color: var(--nord4);
 
-    margin-top: 10px;
+    max-width: 100%;
+    margin-top: 0.625rem;
     box-sizing: border-box;
-    border: 2px solid var(--nord13);
-    border-radius: 10px;
+    border: 0.125rem solid var(--nord7);
+    border-radius: 0.625rem;
+
+    font-family: "Sometype Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
 }
 
 .footer a{
     color: var(--nord6);
-    font-family: SometypeMonoItalic;
 }
 
 hr{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
     margin-right: 25vw;
 
-    border: 2px solid var(--nord3);
-    border-radius: 3px;
-}
-
-html{
-    background-color: var(--BgColor);
-    font-family: ChesnaGrotesk;
+    border: 0.125rem solid var(--nord2);
+    border-radius: 0.1875rem;
 }
 
 p {
     color:var(--nord6);
 
-    font-family: ChesnaGrotesk;
-    font-size: 12pt;
+    font-size: 0.75rem;
+}
+
+/*FOR MOBILE/SMALL SCREEN FORMATTING ONLY*/
+@media only screen and (max-width: 37.5rem){
+    .nav{
+        font-size: 1.25rem;
+    }
+    
+    .row{
+        flex-direction: column;
+    }
+
+    .Left{
+        max-width: 100%;
+    }
+
+    .Right{
+        max-width: 100%;
+        order: -1;
+    }
+
+    .footer{
+        font-size: 1.5rem;
+    }
+    
 }
